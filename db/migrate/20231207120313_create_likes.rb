@@ -1,10 +1,8 @@
 class CreateLikes < ActiveRecord::Migration[7.1]
   def change
     create_table :likes do |t|
-      t.bigint 'user_id'
-      t.bigint 'post_id'
-      t.index ['post_id'], name: 'index_likes_on_post_id'
-      t.index ['user_id'], name: 'index_likes_on_user_id'
+      t.references :user, foreign_key: true # this will create user_id and a corresponding index  (but students can also add column and index in separate commands)
+      t.references :post, foreign_key: true
       t.timestamps
     end
   end

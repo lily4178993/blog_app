@@ -3,7 +3,6 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-
   # update the posts counter for a user by 1
   def update_posts_counter(user)
     user.posts_counter = user.posts_counter.to_i + 1

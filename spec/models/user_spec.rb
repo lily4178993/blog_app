@@ -3,17 +3,16 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:user) { User.create(name: 'Joy', photo: 'https://www.google.com/url', bio: 'she is a software developer', posts_counter: 0) }
 
-it 'Name should not be blank' do
+  it 'Name should not be blank' do
     user.name = nil
     expect(user).to_not be_blank
   end
 
   describe '#recent_posts' do
-
     it 'returns 3 most recent posts for a user' do
       # Save the user first
       # user.save
-    expect(user).to be_valid
+      expect(user).to be_valid
 
       # Creating 4 posts for the user
       post1 = Post.create(author_id: user.id, title: 'Post 1', text: 'This is post 1', comments_counter: 0,

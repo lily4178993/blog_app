@@ -8,6 +8,11 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_blank
   end
 
+  it 'should have PostCouner greater than or equal to zero' do
+    user.posts_counter = 2
+    expect(user.posts_counter).to be >= 0
+  end
+
   describe '#recent_posts' do
     it 'returns 3 most recent posts for a user' do
       # Save the user first

@@ -18,7 +18,7 @@ RSpec.describe User, type: :model do
 
       # Ensure that the post is created successfully
       expect(post3).to be_valid
-      
+
       result = user.recent_posts.to_a
 
       expect(result).to be_an(Array)

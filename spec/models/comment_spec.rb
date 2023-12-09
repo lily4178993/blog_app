@@ -23,8 +23,8 @@ RSpec.describe Comment, type: :model do
 
     let(:comment) do
       Comment.new(
-        user: user,
-        post: post,
+        user:,
+        post:,
         text: 'Test Comment'
       )
     end

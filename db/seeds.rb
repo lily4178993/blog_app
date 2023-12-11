@@ -1,12 +1,10 @@
 first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
 second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
 
-first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
-second_post = Post.create(author: first_user, title: 'Yello', text: 'This is my Second post')
-third_post = Post.create(author: first_user, title: 'Zello', text: 'This is my third post')
-fourth_post = Post.create(author: first_user, title: 'Mello', text: 'This is my fourth post')
+first_post = Post.create(author_id: first_user.id, title: 'Mister', text: 'This is Tom first post')
+second_post = Post.create(author_id: second_user.id, title: 'Miss', text: 'This is Lily first post')
 
-first_comment = Comment.create(post: first_comment, user: second_user, text: 'Hi Tom!' )
-second_comment = Comment.create(post: second_comment, user: second_user, text: 'Hi Zom!' )
-third_comment = Comment.create(post: third_comment, user: second_user, text: 'Hi Com!' )
-fourth_comment = Comment.create(post: fourth_comment, user: second_user, text: 'Hi Mom!' )
+first_comment = Comment.create(user_id: first_user.id, post_id: first_post.id, text: 'Tom first comment!')
+second_comment = Comment.create(user_id: second_user.id, post_id: second_post.id, text: 'Lily second comment!')
+
+# puts first_user

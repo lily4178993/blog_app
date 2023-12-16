@@ -5,12 +5,11 @@ class LikesController < ApplicationController
     @like = @post.likes.build(user: current_user)
 
     respond_to do |format|
-  if @like.save
-    format.html { redirect_to user_post_path(@user, @post), notice: 'Like was successfully created.' }
-  else
-    format.html { redirect_to user_post_path(@user, @post), alert: 'Failed to create like.' }
-  end
-end
-
+      if @like.save
+        format.html { redirect_to user_post_path(@user, @post), notice: 'Like was successfully created.' }
+      else
+        format.html { redirect_to user_post_path(@user, @post), alert: 'Failed to create like.' }
+      end
+    end
   end
 end

@@ -1,8 +1,12 @@
 <section class = "post-section-container">
-    <p> <%= @post.title %> </p>
-    <p> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
-    <p> <%= @post.text %> </p>
-    <% @post.comments.each do |comment| %>
-    <p> <%= comment.user.name %> : <%= comment.text %> </p>
-    <% end %>
+    <div class = "post-section-content">
+        <p> <%= @post.title %> </p>
+        <p> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+        <p> <%= @post.text %> </p>
+    </div>
+    <div class = "post-section-comment-container">
+        <% @post.comments.each do |comment| %>
+        <p> <%= comment.user.name %> : <%= comment.text %> </p>
+        <% end %>
+    </div>
 </section>

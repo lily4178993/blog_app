@@ -1,2 +1,12 @@
-<h1>Single Posts</h1>
-<p>This is to display all single posts</p>
+<section class = "post-section-container">
+    <div class = "post-section-content">
+        <p> <%= @post.title %> </p>
+        <p> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+        <p> <%= @post.text %> </p>
+    </div>
+    <div class = "post-section-comment-container">
+        <% @post.comments.each do |comment| %>
+        <p> <%= comment.user.name %> : <%= comment.text %> </p>
+        <% end %>
+    </div>
+</section>

@@ -24,7 +24,7 @@ RSpec.describe 'UserControllers', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'should render the template page of all users' do
+    it 'should render the template page of a single users' do
       get '/users/:id'
       expect(response).to render_template(:show)
     end

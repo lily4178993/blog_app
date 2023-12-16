@@ -3,7 +3,8 @@
   height: 50px;
 }
 
-.single-user-img {
+.single-user-img,
+.users-posts {
   width: 100px;
   height: 100px;
 }

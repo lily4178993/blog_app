@@ -6,7 +6,8 @@ RSpec.feature 'Comments#new', type: :feature do
   end
 
   let(:post) do
-    Post.create(id: 1, author: user, title: 'Test Post', text: 'This is a test post', comments_counter: 2, likes_counter: 5)
+    Post.create(id: 1, author: user, title: 'Test Post', text: 'This is a test post', comments_counter: 2,
+                likes_counter: 5)
   end
 
   before do

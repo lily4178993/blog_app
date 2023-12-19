@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'posts/show', type: :view do
   let(:user) { User.create(id: 1, name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Lorem ipsum', posts_counter: 2) }
   let!(:post) do
-    Post.create(id: 1, author: user, title: 'Test Post', text: 'This is a test post', comments_counter: 2, likes_counter: 5)
+    Post.create(id: 1, author: user, title: 'Test Post', text: 'This is a test post', comments_counter: 2,
+                likes_counter: 5)
   end
 
   before do

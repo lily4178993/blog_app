@@ -22,9 +22,9 @@
           Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
          <button class="likes-btn" >
             <%= render partial: 'likes/likes_button',locals:{post:post} %>
-        </button>
+         </button>
           <%= link_to new_user_post_comment_url(post_id: post.id) do %>
-         <button class="comment-btn" >Comment</button>
+            <button class="comment-btn" >Comment</button>
           <% end %>
         </div>
         <ul class= 'user-posts-comment-container'>

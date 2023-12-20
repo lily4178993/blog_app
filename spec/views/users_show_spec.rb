@@ -9,10 +9,11 @@ RSpec.describe 'User Show Page', type: :feature do
       posts_counter: 3
     )
     user.posts.create([
-      { title: 'First post', text: 'This is the first post.', comments_counter: 2, likes_counter: 5 },
-      { title: 'Second post', text: 'This is the second post.', comments_counter: 1, likes_counter: 3 },
-      { title: 'Third post', text: 'This is the third post.', comments_counter: 0, likes_counter: 7 }
-    ])
+                        { title: 'First post', text: 'This is the first post.', comments_counter: 2, likes_counter: 5 },
+                        { title: 'Second post', text: 'This is the second post.', comments_counter: 1,
+                          likes_counter: 3 },
+                        { title: 'Third post', text: 'This is the third post.', comments_counter: 0, likes_counter: 7 }
+                      ])
     user.update(posts_counter: user.posts.count)
     user.reload
   end

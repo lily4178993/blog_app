@@ -2,7 +2,7 @@
 <ul class='user-item-container'>
   <% @users.each do |user| %>
     <li class='user-item-content'>
-      <%= image_tag user.photo, alt: "user photo", class: 'user-item-img' %>
+      <img src="<%= user.photo %>" alt="picture of user" class: 'user-item-img'>
       <div class='user-item-text'>
         <p class='user-name'><%= link_to user.name, user_path(user) %></p>
         <p class= 'user-post-numba'> Number of posts: <%=user.posts_counter%> </p>

@@ -1,7 +1,7 @@
 <section class="log-in-section">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="logIn-inputs">
-      <%= f.text_field :name, autofocus: true, placeholder: "Name", autocomplete: "current-name", class: "name-field" %>
+      <%= f.email_field :email, autofocus: true, placeholder: "email", autocomplete: "email", class: "name-field" %>
       <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "password-field" %>
       <% if devise_mapping.rememberable? %>
         <div class="field">

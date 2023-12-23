@@ -129,6 +129,11 @@ rspec
 - Twitter: [@Ayokunnumi](https://twitter.com/AyokunnumiA)
 - LinkedIn: [@Ayokunnumi](https://www.linkedin.com/in/ayokunnumiomololu)
 
+👤 **Nelly Telli**
+- GitHub: [@lily4178993](https://github.com/lily4178993)
+- LinkedIn: [Nelly T.](https://www.linkedin.com/in/nellytelli/)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
